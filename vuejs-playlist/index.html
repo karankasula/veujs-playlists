@@ -7,9 +7,22 @@
 
 <body>
     <div id="intro" style="text-align:center;">
-        <h1>{{ message }}</h1>
+        <h1>{{greet('morning')}}</h1>
+        <h1>This is {{ name }}</h1>
+        <a v-bind:href=website>Goto facebook</a>
+        <br>
+        <button v-on:click="age++">Add year</button>
+        <button v-on:click="age--">Subtract year</button>
+        <button v-on:dblclick="age++">Double click to add year</button>
+        <button v-on:dblclick="age--">Double click to Subtract year</button>
+        <p>My age is {{age}}</p>
+        <label>Name:</label>
+        <input type="text" v-on:keyup.enter="logname" />
+        <label>Age:</label>
+        <input type="text" v-on:keyup.enter="logage" />
+
     </div>
-    <script type="text/javascript" src="app.js">
+    <script type=" text/javascript " src="app.js ">
     </script>
 </body>
 
