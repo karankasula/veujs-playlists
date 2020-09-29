@@ -1,7 +1,7 @@
 <template>
   <div id="ninjas">
     <ul>
-      <li v-for="ninja in ninjas_data" v-on:click="ninja.show=!ninja.show">  
+      <li v-for="ninja in ninjas" v-on:click="ninja.show=!ninja.show">  
         <h2>{{ninja.name}}</h2>
         <h3 v-show="ninja.show">{{ninja.speciality}}</h3>
 
@@ -16,12 +16,7 @@ export default {
     props:['ninjas'],
   data () {
     return {
-      ninjas_data: [
-        {name:'karan',speciality:'django',show:false},
-        {name:'hemanta',speciality:'database',show:false},
-        {name:'kritika',speciality:'dotnet',show:false},
-        {name:'ishara',speciality:'php',show:false}
-      ]
+      
     }
   }
 }
